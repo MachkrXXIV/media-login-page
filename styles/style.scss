@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lato&family=Marck+Script&family=Merriweather&family=Open+Sans&family=Roboto&family=Source+Sans+Pro&family=Varela+Round&display=swap");
+
+// Variables
+$bg-primary: hsl(217, 30%, 15%);
+$text-primary: hsl(0, 0%, 48%);
+$btn-primary: hsl(300, 51%, 20%);
+$link-primary: hsl(184, 88%, 20%);
+
+*::before,
+*,
+*::after {
+  box-sizing: border-box;
+}
+
+aside {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  background-color: $bg-primary;
+  color: $text-primary;
+}
