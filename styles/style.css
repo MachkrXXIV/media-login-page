@@ -28,22 +28,39 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  background-color: #1b2432;
-  background: url("/images/books-and-chair.jpg");
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   color: #b3b2b2;
 }
 
 main > * {
   background-color: rgba(27, 36, 50, 0.8);
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
+}
+
+main .bg-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1b2432;
+  background: url("/images/books-and-chair.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-filter: grayscale(0.8);
+          filter: grayscale(0.8);
+  z-index: -1;
+}
+
+main .content {
+  position: relative;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 main .description {
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
