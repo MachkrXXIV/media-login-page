@@ -2,9 +2,10 @@
 
 // Variables
 $bg-primary: hsl(217, 30%, 15%);
-$text-primary: hsl(0, 0%, 48%);
+$text-primary: hsl(0, 1%, 70%);
 $btn-primary: hsl(300, 51%, 20%);
 $link-primary: hsl(184, 88%, 20%);
+$overlay: hsla(217, 30%, 15%, 0.8);
 
 :root {
   font-size: 16;
@@ -27,6 +28,23 @@ body {
 }
 
 main {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
   background-color: $bg-primary;
+  background: url("/images/books-and-chair.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
   color: $text-primary;
+
+  > * {
+    background-color: $overlay;
+    filter: blur(0px);
+    // margin: 50px;
+  }
+
+  .description {
+    font-size: 2rem;
+  }
 }
