@@ -95,6 +95,7 @@ button {
   background-color: $title-primary;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 input {
@@ -127,4 +128,12 @@ label {
 a {
   text-decoration: none;
   color: $link-primary;
+}
+
+ul {
+  margin: 1rem 0;
+  margin-left: 10%;
+  list-style-type: square;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
