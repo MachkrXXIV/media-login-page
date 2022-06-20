@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lato&family=Marck+Script&family=Merriweather&family=Open+Sans&family=Roboto&family=Source+Sans+Pro&family=Varela+Round&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=IBM+Plex+Sans&family=Lato&family=Merriweather&family=Open+Sans&family=Roboto&family=Source+Sans+Pro:ital@0;1&display=swap");
 // Variables
 $bg-primary: hsl(217, 30%, 15%);
 $text-primary: hsl(0, 1%, 70%);
-$btn-primary: hsl(300, 51%, 20%);
-$link-primary: hsl(184, 88%, 20%);
+$btn-primary: hsl(300, 64%, 37%);
+$link-primary: hsl(184, 82%, 35%);
 $overlay: hsla(217, 30%, 15%, 0.9);
+$title-primary: hsl(290, 74%, 46%);
 
 :root {
   font-size: 16;
-  font-family: Varela Rounded, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: Sources Sans Pro, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -62,6 +62,7 @@ main {
   }
 
   .description {
+    margin: 1.7rem 0;
     font-size: 1rem;
     letter-spacing: 0.2rem;
   }
@@ -70,33 +71,60 @@ main {
     margin-bottom: 1rem;
     font-size: 1.4rem;
   }
+
+  .mobile-title {
+    color: $title-primary;
+    font-family: Carter One, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0px 5px 15px rgb(153, 51, 179);
+  }
 }
 
 button {
+  display: block;
   position: relative;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  margin-top: 3rem;
+  text-align: center;
   padding: 0.5rem;
   border-radius: 2rem;
   font-size: 1.5rem;
-  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: $title-primary;
+  color: #fff;
+  border: none;
 }
 
 input {
+  font-size: 1.2rem;
   display: block;
   width: 90vw;
   padding-left: 0.5rem;
   border-radius: 1rem;
   border-color: $link-primary;
+
+  &:invalid {
+    border-color: #af4261;
+  }
 }
 
 label {
+  display: block;
   padding-left: 0.2rem;
+  margin-bottom: 0.3rem;
   letter-spacing: 0.1rem;
 }
 
 .logo {
   height: auto;
-  width: 50vw;
+  width: 20vw;
   position: relative;
   background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: $link-primary;
 }
