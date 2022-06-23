@@ -17,6 +17,7 @@ $title-primary: hsl(290, 74%, 46%);
 *,
 *::after {
   box-sizing: border-box;
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
 aside {
@@ -59,6 +60,11 @@ main {
     position: relative;
     padding: 1rem;
     overflow-x: hidden;
+
+    .form,
+    .intro {
+      position: relative;
+    }
   }
 
   .description {
@@ -70,6 +76,13 @@ main {
   .input {
     margin-bottom: 1rem;
     font-size: 1.4rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .mobile-title {
@@ -104,11 +117,16 @@ input {
   width: 90vw;
   padding-left: 0.5rem;
   border-radius: 1rem;
-  border-color: $link-primary;
+  border: 3px solid $link-primary;
 
-  &:invalid {
-    border-color: #af4261;
+  &:focus {
+    outline: 2px solid $title-primary;
+    box-shadow: 0 0 5px 5px $title-primary;
   }
+
+  // &:invalid {
+  //   border-color: #af4261;
+  // }
 }
 
 label {
@@ -136,4 +154,18 @@ ul {
   list-style-type: square;
   font-size: 1.2rem;
   letter-spacing: 1px;
+}
+
+@media (min-width: 961px) {
+  .content {
+    display: flex;
+    flex-flow: row;
+    .form {
+      flex: 66%;
+    }
+
+    .intro {
+      flex: 33%;
+    }
+  }
 }

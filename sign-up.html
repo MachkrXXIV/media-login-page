@@ -15,15 +15,17 @@
     <main>
       <div class="bg-mobile"></div>
       <div class="content">
-        <img class="logo" src="/images/aest-logo.png" alt="aest-logo">
-        <h1 class="mobile-title">
-          Aestare
-        </h1>
-        <h2 class="description">
-          From books to movies, games to TV-series, review each and every aspect
-          of the things you loved and disliked! See other users' voiced opinions
-          on them as well and keep track of the episode/chapter you are on!
-        </h2>
+        <div class="intro">
+          <img class="logo" src="/images/aest-logo.png" alt="aest-logo">
+          <h1 class="mobile-title">
+            Aestare
+          </h1>
+          <h2 class="description">
+            From books to movies, games to TV-series, review each and every aspect
+            of the things you loved and disliked! See other users' voiced opinions
+            on them as well and keep track of the episode/chapter you are on!
+          </h2>
+        </div>
         <form class="form">
           <div class="input">
             <label for="first-name">First Name</label>
@@ -47,7 +49,7 @@
           </div>
           <div class="input">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" required />
+            <input type="password" name="password" id="password" minlength="8" required />
             <ul class="password-reqs">
               <li>8 characters</li>
               <li>1 letter</li>
@@ -61,8 +63,8 @@
           </div>
           <button type="submit" class="create">Create Account</button>
         </form>
-        <h3>Already have an account? <a href="#">login</a></h3>
-            </main>
+        <h3>Already have an account? <a href="#">Login</a></h3>
+    </main>
       </div>
   </body>
 </html>
