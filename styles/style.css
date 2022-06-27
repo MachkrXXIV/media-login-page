@@ -9,11 +9,6 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-aside {
-  display: none;
 }
 
 body {
@@ -68,6 +63,11 @@ main .content {
 main .content .form,
 main .content .intro {
   position: relative;
+}
+
+main .content .form p,
+main .content .intro p {
+  text-align: center;
 }
 
 main .description {
@@ -137,6 +137,12 @@ input:focus {
           box-shadow: 0 0 5px 5px #af1ecc;
 }
 
+input:invalid:focus {
+  border-color: #af4261;
+  -webkit-box-shadow: 0 0 5px 5px #af4261;
+          box-shadow: 0 0 5px 5px #af4261;
+}
+
 label {
   display: block;
   padding-left: 0.2rem;
@@ -165,24 +171,34 @@ ul {
 }
 
 @media (min-width: 961px) {
+  main > * {
+    background: none;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    float: right;
   }
-  .content .form {
-    -webkit-box-flex: 66%;
-        -ms-flex: 66%;
-            flex: 66%;
+  .content .form,
+  .content .intro {
+    height: 50vh;
   }
   .content .intro {
-    -webkit-box-flex: 33%;
-        -ms-flex: 33%;
-            flex: 33%;
+    float: left;
+    width: 50vw;
+  }
+  .content .form {
+    float: right;
+    width: 50vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

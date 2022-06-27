@@ -17,11 +17,7 @@ $title-primary: hsl(290, 74%, 46%);
 *,
 *::after {
   box-sizing: border-box;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-aside {
-  display: none;
+  // background-color: rgba(255, 0, 0, 0.1);
 }
 
 body {
@@ -64,6 +60,10 @@ main {
     .form,
     .intro {
       position: relative;
+
+      p {
+        text-align: center;
+      }
     }
   }
 
@@ -124,9 +124,10 @@ input {
     box-shadow: 0 0 5px 5px $title-primary;
   }
 
-  // &:invalid {
-  //   border-color: #af4261;
-  // }
+  &:invalid:focus {
+    border-color: #af4261;
+    box-shadow: 0 0 5px 5px #af4261;
+  }
 }
 
 label {
@@ -157,15 +158,34 @@ ul {
 }
 
 @media (min-width: 961px) {
+  main > * {
+    background: none;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .bg-mobile {
+    // display: none;
+  }
   .content {
     display: flex;
-    flex-flow: row;
-    .form {
-      flex: 66%;
+    justify-content: center;
+    float: right;
+    .form,
+    .intro {
+      height: 50vh;
     }
 
     .intro {
-      flex: 33%;
+      float: left;
+      width: 50vw;
+    }
+
+    .form {
+      float: right;
+      width: 50vw;
     }
   }
 }
