@@ -9,6 +9,7 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-y: visible;
 }
 
 body {
@@ -179,6 +180,14 @@ ul {
     display: -ms-flexbox;
     display: flex;
   }
+  .bg-mobile {
+    position: relative;
+    height: 50%;
+    width: 40vw;
+    -webkit-filter: none;
+            filter: none;
+    z-index: 1;
+  }
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -186,19 +195,27 @@ ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    float: right;
+    width: 60vw;
+    left: 40vw;
+    background-color: rgba(27, 36, 50, 0.9);
   }
   .content .form,
   .content .intro {
-    height: 50vh;
-  }
-  .content .intro {
-    float: left;
-    width: 50vw;
+    height: 100vh;
   }
   .content .form {
-    float: right;
-    width: 50vw;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content input {
+    width: 55%;
+  }
+  .content .logo {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

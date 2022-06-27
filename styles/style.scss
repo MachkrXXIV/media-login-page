@@ -18,6 +18,7 @@ $title-primary: hsl(290, 74%, 46%);
 *::after {
   box-sizing: border-box;
   // background-color: rgba(255, 0, 0, 0.1);
+  overflow-y: visible;
 }
 
 body {
@@ -168,24 +169,36 @@ ul {
 
   .bg-mobile {
     // display: none;
+    position: relative;
+    height: 50%;
+    width: 40vw;
+    filter: none;
+    z-index: 1;
   }
+
   .content {
     display: flex;
     justify-content: center;
-    float: right;
+    width: 60vw;
+    left: 40vw;
+    background-color: $overlay;
     .form,
     .intro {
-      height: 50vh;
-    }
-
-    .intro {
-      float: left;
-      width: 50vw;
+      height: 100vh;
     }
 
     .form {
-      float: right;
-      width: 50vw;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    input {
+      width: 55%;
+    }
+
+    .logo {
+      display: none;
     }
   }
 }
