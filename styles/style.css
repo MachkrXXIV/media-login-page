@@ -203,6 +203,9 @@ ul {
   .content .intro {
     height: 100vh;
   }
+  .content .intro {
+    font-size: 3rem;
+  }
   .content .form {
     width: 100%;
     display: -webkit-box;
@@ -212,9 +215,10 @@ ul {
         flex-wrap: wrap;
   }
   .content input {
-    width: 55%;
+    width: 100%;
   }
-  .content .logo {
+  .content .logo,
+  .content ul {
     display: none;
   }
 }

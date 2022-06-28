@@ -187,6 +187,10 @@ ul {
       height: 100vh;
     }
 
+    .intro {
+      font-size: 3rem;
+    }
+
     .form {
       width: 100%;
       display: flex;
@@ -194,10 +198,11 @@ ul {
     }
 
     input {
-      width: 55%;
+      width: 100%;
     }
 
-    .logo {
+    .logo,
+    ul {
       display: none;
     }
   }
